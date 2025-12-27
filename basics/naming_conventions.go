@@ -1,4 +1,4 @@
-package main
+package basics
 
 import "fmt"
 
@@ -8,7 +8,7 @@ type Employee struct {
 	Age       int
 }
 
-func main() {
+func namingConventions() {
 
 	// Pascal Case
 	// Eg. CalculateArea, UserProfile, OrderDetails

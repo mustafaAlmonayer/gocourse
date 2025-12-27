@@ -1,11 +1,11 @@
-package main
+package basics
 
 // only accessible within package main
 import "fmt"
 
 var middleName = "Cane"
 
-func main() {
+func variables() {
 	// var age int
 	// var name string = "John"
 	// var name1 = "Jane"
