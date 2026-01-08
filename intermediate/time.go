@@ -1,11 +1,11 @@
-package main
+package intermediate
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func timeEx() {
 
 	// Current Local Time
 	fmt.Println(time.Now())
