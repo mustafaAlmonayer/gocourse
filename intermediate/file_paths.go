@@ -1,4 +1,4 @@
-package main
+package intermediate
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func filePaths() {
 	relativePath := "./data/file.txt"
 	absolutePath := "/home/user/docs/file.txt"
 
@@ -44,4 +44,8 @@ func main() {
 	fmt.Println(rel)
 
 	absPath, err := filepath.Abs(relativePath)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(absPath)
 }
