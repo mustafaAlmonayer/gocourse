@@ -2,7 +2,7 @@ package intermediate
 
 import "fmt"
 
-type Person struct {
+type Person16 struct {
 	firstName string
 	lastName  string
 	age       int
@@ -24,32 +24,32 @@ type Person2 struct {
 	Address
 }
 
-type Address struct {
+type Address16 struct {
 	city    string
 	country string
 }
 
-func (p Person) printName() {
+func (p Person16) printName() {
 	fmt.Println(p.firstName, p.lastName)
 }
 
-func (p Person) getname() string {
+func (p Person16) getname() string {
 	return p.firstName + " " + p.lastName
 }
 
 // Can change value
-func (p *Person) incrementAge() {
+func (p *Person16) incrementAge() {
 	p.age++
 }
 
 // Cant change value
-func (p Person) incrementAgeNoPointer() {
+func (p Person16) incrementAgeNoPointer() {
 	p.age++
 }
 
 func structs() {
 
-	p := Person{
+	p := Person16{
 		firstName: "John",
 		lastName:  "Doe",
 		age:       30,
