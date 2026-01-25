@@ -1,4 +1,4 @@
-package main
+package intermediate
 
 import (
 	"encoding/xml"
@@ -14,7 +14,7 @@ type Person44 struct {
 	Email   string   `xml:"email"`
 }
 
-func main() {
+func xmlExp() {
 
 	person := Person44{Name: "John", Age: 30, City: "London", Email: "email@example.com"}
 
@@ -24,5 +24,21 @@ func main() {
 	}
 
 	fmt.Println(string(data))
+
+	xmlStr := `
+		<person>
+			<name>Jane</name>
+			<age>25</age>
+		</person>
+	`
+
+	person44 := Person44{}
+
+	err = xml.Unmarshal([]byte(xmlStr), &person44)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	fmt.Println(person44)
 
 }
