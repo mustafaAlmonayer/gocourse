@@ -1,8 +1,8 @@
-package main
+package intermediate
 
 import "fmt"
 
-func main() {
+func typeConversion() {
 	var a int = 32
 	b := int32(a)
 	c := float64(b)
@@ -15,4 +15,7 @@ func main() {
 	g := "Hello"
 	h := []byte(g)
 	fmt.Println(h)
+	i := []byte{255, 72}
+	j := string(i)
+	fmt.Println(j)
 }
